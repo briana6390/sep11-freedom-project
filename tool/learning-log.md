@@ -7,7 +7,7 @@ Project: **Freedom Project**
 ---
 
 11/26/23:
-* While i was trying to learn more about my topic i was wondering how am i really going to make it into a kearnign game.
+* While i was trying to learn more about my topic i was wondering how am i really going to make it into a learning game.
 So i searched for some games that is fun and educational and here is what i got
 Games:
 - Mario Bros
@@ -46,7 +46,10 @@ Flappy Bird:
 
 
 
-12/11 - 12/22:
+03/25 - 04/01:
+As of now i have done some pretty good advancments into this project. One thinkg that i have notice is even though I keep on learning about new codes.
+This could lead my creativity in the game to become somthign bigger. But as of now i am trying to learn how can i add some P5JS into my Kaboom.Js code, because ever since i started learning about P5JS in SEP i have decided that i wanted to add a new background to the start up game and to the end of the level or also to the the background were the players lose,
+As of now i am having a bit of trouble because i am trying to find tutorials in Youtube on how to add a P5JS to Kaboom but i am not getting any results. I`ve tried ot go to the P5Js and Kaboom website to see they can give me a doc one how to do it but it just end up to them showing me a code editor on P5Js. So for this weeks goal i would love to try and get the P5js code working onto my Kaboom code
 
 
 
