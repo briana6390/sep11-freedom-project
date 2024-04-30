@@ -38,13 +38,14 @@
     });
 
     scene("game",() => {
-        const player = add([
+        const ship = add([
             sprite(blueship),
             scale(0.17),
             pos(width()/2, height()/2),
         ])
-        ""
+        "player"
     });
+
 
 
     scene("gameOver", (score) =>{
