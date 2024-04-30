@@ -1,4 +1,5 @@
-// Initialize Kaboom.js
+import kaboom from "kaboom";
+
 kaboom();
 
 // Define constants
@@ -87,6 +88,9 @@ player.action(() => {
     player.pos.x = width();
   }
 });
+
+
+
 
 
 
