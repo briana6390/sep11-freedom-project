@@ -14,38 +14,49 @@
         kaboom();
 
       // Blue Ship
-    loadSprite("blueship", "sprites/blueship.png")
-    add([
-     sprite("blueship"),
-        pos(width() / 2, 850),
-        scale(0.179),
-        area(),
-    ])
-// Row 1
-    loadSprite("red", "sprites/red.png")
-    add([
-     sprite("red"),
-        pos(width()/8, height()/20),
-        scale(0.179),
-        area(),
-    ])
-//Row 2
-    loadSprite("red", "sprites/red.png")
-    add([
-     sprite("red"),
-        pos(width()/8, height()/7),
-        scale(0.17999),
-        area(),
-        color(255,255,0)
-    ])
-//Row 3
-    loadSprite("red", "sprites/red.png")
-    add([
-     sprite("red"),
-        pos(width()/8, height()/4.3),
-        scale(0.179),
-        area(),
-    ])
+    loadRoot("sprites/");
+    loadSpriteAtlas("blueship.png",{
+        "ship":{
+            "x":0,
+            "y":0,
+            "width":30,
+            "height": 30,
+
+        }
+    });
+
+    //Red
+    loadRoot("sprites/");
+    loadSpriteAtlas("red.png",{
+        "red":{
+            "x":0,
+            "y":0,
+            "width":30,
+            "height": 30,
+
+        }
+    });
+
+    scene("game",() => {
+        const player = add([
+            sprite(blueship),
+            scale(0.17),
+            pos(width()/2, height()/2),
+        ])
+        ""
+    });
+
+
+    scene("gameOver", (score) =>{
+
+    });
+
+
+
+
+
+
+
 
 
 
