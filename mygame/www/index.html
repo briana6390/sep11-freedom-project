@@ -13,26 +13,37 @@
         // initialize kaboom context
         kaboom();
 
-        loadSprite("bean", "sprites/bean.png")
-
-// add something to screen
-add([
-    sprite("bean"),
-    pos(80, 40),
-    scale(3),
-    rotate(30),
-    color(0, 0, 255),
-])
-
-
-
-
-        // Blue Ship
+      // Blue Ship
     loadSprite("blueShip", "sprites/blueship.png")
     add([
      sprite("blueShip"),
         pos(800, 400),
-        scale(0.17)
+        scale(0.17),
+        area(),
+    ])
+    // Red
+    loadSprite("red", "sprites/red.png")
+    add([
+     sprite("red"),
+        pos(80, 40),
+        scale(0.17),
+        area(),
+    ])
+    // yellow
+    loadSprite("yellow", "sprites/yellow.png")
+    add([
+     sprite("yellow"),
+        pos(80, 400),
+        scale(0.17),
+        area(),
+    ])
+    // green
+    loadSprite("green", "sprites/green.png")
+    add([
+     sprite("green"),
+        pos(800, 40),
+        scale(0.17),
+        area(),
     ])
 
 
