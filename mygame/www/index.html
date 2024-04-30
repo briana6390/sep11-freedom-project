@@ -19,9 +19,10 @@
         "ship":{
             "x":0,
             "y":0,
-            "width":30,
+            "width":180,
             "height": 30,
-
+            "sliceX":3,
+            "sliceY":1, 
         }
     });
 
@@ -40,8 +41,8 @@
     scene("game",() => {
         const ship = add([
             sprite(blueship),
-            scale(0.17),
-            pos(width()/2, height()/2),
+            scale(1),
+            pos(500, 500),
         ])
         "player"
     });
