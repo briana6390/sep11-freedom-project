@@ -3,7 +3,15 @@ const SCREEN_EDGE = 100;
 
 
 
-    const player = add({})
+
+
+    // const player = add([
+    //     sprite(blueship),
+    //     scale(0.17)
+    //     pos(width()/2, height()/2),
+    //     area(),
+    //     "player"
+    // ]);
 
 
 
