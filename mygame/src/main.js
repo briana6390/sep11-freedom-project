@@ -6,7 +6,9 @@ const PLAYER_MOVE_SPEED = 500;
 const SCREEN_EDGE = 100;
 
     onKeyDown("left", () => {
-    
+    if(blueship.pos.x <= width() - SCREEN_EDGE){
+		blueship.move(PLAYER_MOVE_SPEED,0)
+	}
     })
 
     onKeyDown("right", () => {
