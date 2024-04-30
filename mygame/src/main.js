@@ -1,12 +1,120 @@
 import kaboom from "kaboom"
 
-const k = kaboom()
+kaboom({
+	setBackground[250,0,0]
+});
 
-k.loadSprite("bean", "sprites/bean.png")
 
-k.add([
-	k.pos(120, 80),
-	k.sprite("bean"),
-])
 
-k.onClick(() => k.addKaboom(k.mousePos()))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// links for:
+	// sprite = https://www.pngegg.com/en/search?q=space+Invaders
