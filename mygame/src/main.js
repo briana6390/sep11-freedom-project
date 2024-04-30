@@ -9,13 +9,13 @@ const ALIEN_FREQUENCY = 0.5;
 const BULLET_SPEED = 400;
 
 // Load assets
-loadRoot('https://i.imgur.com/');
-loadSprite('ship', 'rcAjq9R.png');
+
+loadSprite('bShip', 'bluwship.png');
 loadSprite('alien', 'c1sehKZ.png');
 
 // Define player
 const player = add([
-  sprite('ship'),
+  sprite('bShip'),
   pos(width() / 2, height() - 40),
   origin('center')
 ]);
