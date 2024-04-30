@@ -1,7 +1,3 @@
-import kaboom from "kaboom"
-
-kaboom()
-
 const PLAYER_MOVE_SPEED = 500;
 const SCREEN_EDGE = 100;
 
