@@ -1,4 +1,6 @@
 import kaboom from "kaboom"
+
+kaboom(152,176,0)
     // Blue Ship
       loadRoot("sprites/");
       loadSpriteAtlas("blueship.png",{
