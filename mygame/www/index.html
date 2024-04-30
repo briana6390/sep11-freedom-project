@@ -50,8 +50,13 @@
     const PLAYER_MOVE_SPEED = 500;
     const SCREEN_EDGE = 100;
 
-    
+    onKeyDown("left", () => {
+    blueShip.move(-SPEED, 0)
+    })
 
+    onKeyDown("right", () => {
+    blueship.move(SPEED, 0)
+    })
 
 
         </script>
