@@ -14,9 +14,9 @@
         kaboom();
 
       // Blue Ship
-    loadSprite("blueShip", "sprites/blueship.png")
+    loadSprite("blueship", "sprites/blueship.png")
     add([
-     sprite("blueShip"),
+     sprite("blueship"),
         pos(width() / 2, 850),
         scale(0.179),
         area(),
@@ -51,7 +51,7 @@
     const SCREEN_EDGE = 100;
 
     onKeyDown("left", () => {
-    blueShip.move(-SPEED, 0)
+    blueship.move(-SPEED, 0)
     })
 
     onKeyDown("right", () => {

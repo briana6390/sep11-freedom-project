@@ -1,8 +1,17 @@
 import kaboom from "kaboom"
 
-kaboom({
-	setBackground[250,0,0]
-});
+kaboom()
+
+const PLAYER_MOVE_SPEED = 500;
+const SCREEN_EDGE = 100;
+
+    onKeyDown("left", () => {
+    
+    })
+
+    onKeyDown("right", () => {
+    blueship.move(SPEED, 0)
+    })
 
 
 
