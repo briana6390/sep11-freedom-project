@@ -1,43 +1,4 @@
-// import kaboom from "kaboom";
-
-
-
-//     // Blue Ship
-//       loadRoot("sprites/");
-//       loadSpriteAtlas("blueship.png",{
-//           "ship":{
-//               "x":0,
-//               "y":0,
-//               "width":180,
-//               "height": 30,
-//               "sliceX":3,
-//               "sliceY":1,
-//           }
-//       });
-
-//       //Red
-//       loadRoot("sprites/");
-//       loadSpriteAtlas("red.png",{
-//           "red":{
-//               "x":0,
-//               "y":0,
-//               "width":30,
-//               "height": 30,
-
-//           }
-//       });
-
-//       //BlueShip
-//       add([
-//         sprite("ship"),
-//     ])
-
-//     const player = add([
-//         sprite("ship")
-//     ]);
-
-
-
+import kaboom from "kaboom";
 
 // Initialize Kaboom.js
 kaboom();
@@ -49,7 +10,7 @@ const ALIEN_FREQUENCY = 0.5;
 const BULLET_SPEED = 400;
 
 // Load assets
-loadRoot('https://i.imgur.com/');
+loadRoot('sprites');
 loadSprite('ship', 'blueship.png');
 loadSprite('red', 'red.png');
 
@@ -67,6 +28,46 @@ keyDown('left', () => {
 keyDown('right', () => {
   player.move(PLAYER_SPEED, 0);
 });
+
+    // Blue Ship
+      loadRoot("sprites/");
+      loadSpriteAtlas("blueship.png",{
+          "ship":{
+              "x":0,
+              "y":0,
+              "width":180,
+              "height": 30,
+              "sliceX":3,
+              "sliceY":1,
+          }
+      });
+
+      //Red
+      loadRoot("sprites/");
+      loadSpriteAtlas("red.png",{
+          "red":{
+              "x":0,
+              "y":0,
+              "width":30,
+              "height": 30,
+
+          }
+      });
+
+      //BlueShip
+      add([
+        sprite("ship"),
+    ])
+
+    const player = add([
+        sprite("ship")
+    ]);
+
+
+
+
+
+
 
 
 
