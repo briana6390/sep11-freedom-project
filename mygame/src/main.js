@@ -32,7 +32,7 @@ import kaboom from "kaboom";
         sprite("ship"),
     ])
 
-    const bean = add([
+    const player = add([
         sprite("ship")
     ]);
 
