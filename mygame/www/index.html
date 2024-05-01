@@ -6,81 +6,35 @@
 <body>
 
     <script type="module">
-        import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+
+import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
 
 kaboom({
-    background: [162,183,0]
+    background: [0,0,0]
 });
 
+add{
 
-loadSprite("ship", "sprites/blueship.png")
-
-// add something to screen
-add([
-    sprite("ship"),
-    pos(80, 40),
-    scale(0.17),
-])
-
-
-
-loadSprite("red", "sprites/red.png")
-
-// add something to screen
-add([
-    sprite("red"),
-    pos(500, 450),
-    scale(0.17),
-])
+}
 
 
 
 
 
-    // Blue Ship
-      loadRoot("sprites/");
-      loadSpriteAtlas("blueship.png",{
-          "ship":{
-              "x":0,
-              "y":0,
-              "width":180,
-              "height": 30,
-              "sliceX":3,
-              "sliceY":1,
-          }
-      });
-
-      //Red
-      loadRoot("sprites/");
-      loadSpriteAtlas("red.png",{
-          "red":{
-              "x":0,
-              "y":0,
-              "width":30,
-              "height": 30,
-
-          }
-      });
-
-      scene("game",() => {
-          const ship = add([
-              sprite("blueship"),
-              scale(1),
-              orgin("center"),
-              pos(500, 500),
-              area(),
-              {
-                  score: 100,
-              },
-          ])
-          "player"
-      });
 
 
 
-      scene("gameOver", (score) =>{
 
-      });
+
+
+
+
+
+
+
+
+
+
     </script>
 
 
@@ -94,7 +48,6 @@ add([
 
 
 
-     </script>
 
 
 
