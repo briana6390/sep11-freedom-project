@@ -27,9 +27,13 @@ import kaboom from "kaboom";
           }
       });
 
+      //BlueShip
       add([
         sprite("ship"),
-        pos(width()/2.5,775)
+    ])
+
+    const bean = add([
+        sprite("ship")
     ]);
 
 
