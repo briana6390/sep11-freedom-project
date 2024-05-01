@@ -4,20 +4,22 @@
 	<title>Math Invaders</title>
 </head>
 <body>
-
     <script type="module">
 
 import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+kaboom()
+
 
 kaboom({
-    background: [0,0,0],
     width: 1000,
     hegigh: 900,
+    background: [0,0,0],
+
 });
 
 add([
     text("Math Invaders"),
-    pos(width()/, 900),
+    pos(width()/2, 900),
 ]);
 
 
