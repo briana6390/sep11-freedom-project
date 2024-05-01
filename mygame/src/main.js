@@ -1,8 +1,6 @@
-import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+import kaboom from "kaboom";
 
-kaboom({
-    background: [162,183,0]
-});
+
 
     // Blue Ship
       loadRoot("sprites/");
@@ -29,25 +27,13 @@ kaboom({
           }
       });
 
-      scene("game",() => {
-          const ship = add([
-              sprite("blueship"),
-              scale(1),
-              orgin("center"),
-              pos(500, 500),
-              area(),
-              {
-                  score: 100,
-              },
-          ])
-          "player"
-      });
+      add([
+        sprite("ship"),
+        pos(width()/2.5,775)
+    ]);
 
 
 
-      scene("gameOver", (score) =>{
-
-      });
 
 
 
