@@ -1,5 +1,5 @@
-kaboom();
+kaboom()
 
 kaboom({
-    background {0,0,0};
+    background: [ 0, 0, 255 ],
 })
