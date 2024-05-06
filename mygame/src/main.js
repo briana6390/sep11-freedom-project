@@ -1,11 +1,11 @@
 // Adding game objects to screen
 import kaboom from "kaboom"
 // Start a kaboom game
-k = kaboom();
+kaboom();
 
 // Load a sprite asset from "sprites/bean.png", with the name "bean"
-k.loadSprite("bean", "/sprites/bean.png")
-k.loadSprite("ghosty", "/sprites/ghosty.png")
+loadSprite("bean", "/sprites/bean.png")
+loadSprite("ghosty", "/sprites/ghosty.png")
 
 // A "Game Object" is the basic unit of entity in kaboom
 // Game objects are composed from components
@@ -20,9 +20,9 @@ const player = add([
 ])
 
 // .onUpdate() is a method on all game objects, it registers an event that runs every frame
-k.player.onUpdate(() => {
+player.onUpdate(() => {
 	// .angle is a property provided by rotate() component, here we're incrementing the angle by 120 degrees per second, dt() is the time elapsed since last frame in seconds
-	k.player.angle += 120 * dt()
+	player.angle += 120 * dt()
 })
 
 // Add multiple game objects
