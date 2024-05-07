@@ -73,7 +73,9 @@ onKeyDown("left", () =>{
 onKeyDown("right", () =>{
     player.move(SPEED,0)
 })
-
+onCollide("beam", "red", () => {
+    destroy(red)
+})
 </script>
 
 
