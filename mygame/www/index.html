@@ -4,26 +4,40 @@
 	<title>Math Invaders</title>
 </head>
 <body>
-    <script type="module">
+    <script type="module"></script>
+    <script src="https://unpkg.com/kaboom@3000.0.1/dist/kaboom.js"></script>
 
-        // import kaboom.js
-        import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+<script>
 
-        // initialize kaboom context
-        kaboom();
+    kaboom({
+        background: [0,0,0],
+    });
 
-        // add a piece of text at position (120, 80)
-        add([
-            text("Math Invaders"),
-            pos(width()/2.5, 900), // Screen has to be at 75% in chrome.
-        ]);
+    loadSprite("ship" , "/sprites/blueship.png")
+    loadSprite("red" , "/sprites/red.png")
 
-        loadSprite("ship", "blueship.png")
-        loadSprite("alien", "red.png")
-
-        </script>
+    add([
+    text("math invaders"),
+    pos(width()/2.5, 900),
+    ]);
 
 
+
+const player = add([
+    sprite("ship"),
+    pos(width()/2 , 780),
+    scale(0.20),
+])
+
+const enemy = add([
+    sprite("red"),
+    pos(width()/2 , 500),
+    scale(0.17),
+])
+
+const SPEED = 320
+
+</script>
 
 
 
