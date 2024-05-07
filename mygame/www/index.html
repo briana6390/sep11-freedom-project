@@ -72,6 +72,8 @@ const enemy6 = add([
 ])
 
 const SPEED = 320
+const BULLET_SPEED = 1200
+
 onKeyDown("left", () =>{
     player.move(-SPEED,0)
 })
@@ -80,6 +82,33 @@ onKeyDown("right", () =>{
 })
 onKeyDown("space", () =>{
     fire.move(SPEED,0)
+
+function spawnBullet(p) {
+		add([
+			rect(12, 48),
+			area(),
+			pos(p),
+			anchor("center"),
+			color(127, 127, 255),
+			outline(4),
+			move(UP, BULLET_SPEED),
+function spawnBullet(p) {
+		add([
+			rect(12, 48),
+			area(),
+			pos(p),
+			anchor("center"),
+			color(127, 127, 255),
+			outline(4),
+			move(UP, BULLET_SPEED),
+			offscreen({ destroy: true }),
+			// strings here means a tag
+			"bullet",
+		])
+	}
+		])
+	}
+
 })
 onCollide("beam", "red", () => {
     destroy(red)
