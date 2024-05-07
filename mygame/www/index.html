@@ -32,7 +32,7 @@ const player = add([
 const fire = add([
     sprite("fire"),
     pos(width()/2 , 780),
-    scale(0.20),
+    scale(10),
 ])
 
 const enemy = add([
@@ -79,7 +79,7 @@ onKeyDown("right", () =>{
     player.move(SPEED,0)
 })
 onKeyDown("space", () =>{
-    player.(SPEED,0)
+    fire.move(SPEED,0)
 })
 onCollide("beam", "red", () => {
     destroy(red)
