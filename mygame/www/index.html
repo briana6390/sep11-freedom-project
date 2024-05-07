@@ -36,6 +36,12 @@ const enemy = add([
 ])
 
 const SPEED = 320
+onKeyDown("left", () =>{
+    player.move(-SPEED,0)
+})
+onKeyDown("right", () =>{
+    player.move(SPEED,0)
+})
 
 </script>
 
