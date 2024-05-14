@@ -80,19 +80,8 @@ onKeyDown("left", () =>{
 onKeyDown("right", () =>{
     player.move(SPEED,0)
 })
-onKeyDown("space", () =>{
-    fire.move(SPEED,0)
-})
-function spawnBullet(p) {
-		add([
-			rect(12, 48),
-			area(),
-			pos(p),
-			anchor("center"),
-			color(127, 127, 255),
-			outline(4),
-			move(UP, BULLET_SPEED),
-            
+
+
 function spawnBullet(p) {
 		add([
 			rect(12, 48),
@@ -107,8 +96,13 @@ function spawnBullet(p) {
 			"bullet",
 		])
 	}
-		])
-	}
+    onKeyPress("space", () => {
+		spawnBullet(player.pos.sub(10, 0))
+		spawnBullet(player.pos.add(5, 00))
+
+	})
+
+
 
 
 onCollide("beam", "red", () => {
