@@ -10,7 +10,7 @@
 <script>
 
     kaboom({
-        background: [0,0,0],
+        background: [219,233,244],
     });
 
     loadSprite("ship" , "/sprites/blueship.png")
@@ -18,61 +18,75 @@
     loadSprite("fire" , "/sprites/bullet.png")
 
     add([
-    text("math invaders"),
+    text("Space Invaders"),
     pos(width()/2.5, 900),
     ]);
-
-
 
 const player = add([
     sprite("ship"),
     pos(width()/2 , 780),
-    scale(0.20),
-])
-const fire = add([
-    sprite("fire"),
-    pos(width()/2 , 780),
-    scale(10),
+    scale(0.13),
 ])
 
 const enemy = add([
     sprite("red"),
     pos(100 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(1),
 ])
 const enemy1 = add([
     sprite("red"),
     pos(300 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(2),
 ])
 const enemy2 = add([
     sprite("red"),
     pos(500 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(3),
 ])
 const enemy3 = add([
     sprite("red"),
     pos(700 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(4),
 ])
 const enemy4 = add([
     sprite("red"),
     pos(900 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(5),
 ])
 const enemy5 = add([
     sprite("red"),
     pos(1100 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(6),
 ])
 const enemy6 = add([
     sprite("red"),
     pos(1300 , 400),
-    scale(0.17),
+    scale(0.13),
+    area(),
+    health(7),
+])
+const enemy7 = add([
+    sprite("red"),
+    pos(1500 , 400),
+    scale(0.13),
+    area(),
+    health(7),
 ])
 
 const SPEED = 320
-const BULLET_SPEED = 1200
+const BULLET_SPEED = 1000
 
 onKeyDown("left", () =>{
     player.move(-SPEED,0)
@@ -85,8 +99,10 @@ onKeyDown("right", () =>{
 function spawnBullet(p) {
 		add([
 			rect(12, 48),
+            color(255,255,255),
 			area(),
 			pos(p),
+            scale(0.1),
 			anchor("center"),
 			color(127, 127, 255),
 			outline(4),
@@ -97,8 +113,8 @@ function spawnBullet(p) {
 		])
 	}
     onKeyPress("space", () => {
-		spawnBullet(player.pos.sub(10, 0))
-		spawnBullet(player.pos.add(5, 00))
+		spawnBullet(player.pos.add(15, 45))
+		spawnBullet(player.pos.add(35, 45))
 
 	})
 
@@ -106,7 +122,7 @@ function spawnBullet(p) {
 
 
 onCollide("beam", "red", () => {
-    destroy(red)
+    destroy("red")
 })
 // onKeyPress(() => {
 //     restart("r")
