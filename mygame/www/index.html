@@ -117,12 +117,9 @@ function spawnBullet(p) {
 		spawnBullet(player.pos.add(47, 45))
 
 	})
-
-
-
-
-onCollide("beam", "red", () => {
-    destroy("red")
+    function spawnBullet.onCollide("enemy", () => {
+    destroy(enemy)
+    go("lose")
 })
 // onKeyPress(() => {
 //     restart("r")
