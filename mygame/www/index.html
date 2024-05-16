@@ -98,11 +98,11 @@ onKeyDown("right", () =>{
 
 function spawnBullet(p) {
 		add([
-			rect(12, 48),
+			sprite("fire"),
             color(255,255,255),
 			area(),
 			pos(p),
-            scale(0.1),
+            scale(5),
 			anchor("center"),
 			color(127, 127, 255),
 			outline(4),
@@ -117,9 +117,7 @@ function spawnBullet(p) {
 		spawnBullet(player.pos.add(47, 45))
 
 	})
-    onCollide("bullet", "red", (b, e) => {
-		destroy(b,)
-	})
+ 
 // onKeyPress(() => {
 //     restart("r")
 // })
