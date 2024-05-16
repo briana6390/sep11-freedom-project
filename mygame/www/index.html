@@ -85,7 +85,7 @@ const enemy7 = add([
     health(7),
 ])
 
-const SPEED = 320
+const SPEED = 520
 const BULLET_SPEED = 1000
 
 onKeyDown("left", () =>{
@@ -115,9 +115,8 @@ function spawnBullet(p) {
     onKeyPress("space", () => {
 		spawnBullet(player.pos.add(20, 45))
 		spawnBullet(player.pos.add(47, 45))
-
 	})
- 
+    onCollide("","")
 // onKeyPress(() => {
 //     restart("r")
 // })
