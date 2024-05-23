@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spam Invaders</title>
+</head>
+<body>
+    <script type="module"></script>
+    <script src="https://unpkg.com/kaboom@3000.0.1/dist/kaboom.js"></script>
+
+<script>
+
+    kaboom({
+        background: [219,233,244],
+    });
+
+    loadSprite("ship" , "sprites/blueship.png")
+    loadSprite("red" , "sprites/red.png")
+    loadSprite("fire" , "sprites/bullet.png")
+
+    add([
+    text("Spam Invaders"),
+    pos(width()/2.5, 900),
+    ]);
+const enemy_health = 2
+
+const player = add([
+    sprite("ship"),
+    pos(width()/2 , 780),
+    scale(0.13),
+])
+
+const enemy = add([
+    sprite("red"),
+    pos(100 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy1 = add([
+    sprite("red"),
+    pos(300 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy2 = add([
+    sprite("red"),
+    pos(500 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy3 = add([
+    sprite("red"),
+    pos(700 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy4 = add([
+    sprite("red"),
+    pos(900 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy5 = add([
+    sprite("red"),
+    pos(1100 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy6 = add([
+    sprite("red"),
+    pos(1300 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+const enemy7 = add([
+    sprite("red"),
+    pos(1500 , 400),
+    scale(0.13),
+    area(),
+    health(enemy_health),
+])
+
+const SPEED = 520
+const BULLET_SPEED = 1000
+
+onKeyDown("left", () =>{
+    player.move(-SPEED,0)
+})
+onKeyDown("right", () =>{
+    player.move(SPEED,0)
+})
+
+
+function spawnBullet(p) {
+		add([
+			sprite("fire"),
+            color(255,255,255),
+			area(),
+			pos(p),
+            scale(5),
+			anchor("center"),
+			color(127, 127, 255),
+			outline(4),
+			move(UP, BULLET_SPEED),
+			offscreen({ destroy: true }),
+			// strings here means a tag
+			"bullet",
+		])
+	}
+    onKeyPress("space", () => {
+		spawnBullet(player.pos.add(20, 45))
+		spawnBullet(player.pos.add(47, 45))
+	})
+
+    onCollide("fire", "red", (f, r) => {
+		destroy(f)
+		addExplode(f.pos, 1, 24, 1)
+	})
+
+    onCollide("bullet", "enemy", (b, e) => {
+		destroy(b)
+		addExplode(b.pos, 1, 24, 1)
+	})
+
+
+// onKeyPress(() => {
+//     restart("r")
+// })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
