@@ -118,17 +118,17 @@ function spawnBullet(p) {
 		spawnBullet(player.pos.add(47, 45))
 	})
 
-    onCollide("fire", "enemy", (b, e) => {
+    onCollide("fire", "red", (f, r) => {
+		destroy(f)
+		addExplode(f.pos, 1, 24, 1)
+	})
+
+    onCollide("bullet", "enemy", (b, e) => {
 		destroy(b)
 		addExplode(b.pos, 1, 24, 1)
 	})
 
 
-
-
-    // onCollide("fire","alien"){
-    //     destroy("fire","enemy"),
-    // }
 // onKeyPress(() => {
 //     restart("r")
 // })
