@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Math Invaders</title>
+	<title>Spam Invaders</title>
 </head>
 <body>
     <script type="module"></script>
@@ -18,7 +18,7 @@
     loadSprite("fire" , "/sprites/bullet.png")
 
     add([
-    text("Space Invaders"),
+    text("Spam Invaders"),
     pos(width()/2.5, 900),
     ]);
 
@@ -116,7 +116,9 @@ function spawnBullet(p) {
 		spawnBullet(player.pos.add(20, 45))
 		spawnBullet(player.pos.add(47, 45))
 	})
-    onCollide("","")
+    // onCollide("fire","alien"){
+    //     destroy("fire","enemy"),
+    // }
 // onKeyPress(() => {
 //     restart("r")
 // })
