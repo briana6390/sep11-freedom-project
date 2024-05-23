@@ -116,6 +116,15 @@ function spawnBullet(p) {
 		spawnBullet(player.pos.add(20, 45))
 		spawnBullet(player.pos.add(47, 45))
 	})
+
+    onCollide("fire", "enemy", (b, e) => {
+		destroy(b)
+		addExplode(b.pos, 1, 24, 1)
+	})
+
+
+
+
     // onCollide("fire","alien"){
     //     destroy("fire","enemy"),
     // }
